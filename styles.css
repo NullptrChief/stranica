@@ -22,8 +22,9 @@ body {
   padding: 0;
   margin: 0;
   display: flex; /* Postavlja stavke u red */
-  justify-content: space-around; /* Ravnomerno raspoređuje stavke */
-  flex-wrap: wrap; /* Omogućava prelazak u novi red ako je potrebno */
+  justify-content: center; /* Centriranje stavki */
+  gap: 20px; /* Razmak između stavki */
+  flex-wrap: nowrap; /* Sprečava prelazak u novi red */
 }
 
 .navbar li {
@@ -132,9 +133,5 @@ a:hover {
   .navbar a {
     font-size: 1rem; /* Manji font na manjim ekranima */
     padding: 5px 10px; /* Manji razmak između stavki */
-  }
-
-  .navbar ul {
-    justify-content: space-evenly; /* Poboljšano poravnanje na manjim ekranima */
   }
 }
