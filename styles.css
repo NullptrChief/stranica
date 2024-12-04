@@ -1,7 +1,6 @@
 /* General styling */
 body {
   font-family: 'Open Sans', sans-serif;
-  /* Moderniji sans-serif font */
   background-color: #cfadbb;
   margin: 0;
   padding: 0;
@@ -9,14 +8,11 @@ body {
   line-height: 1.8;
 }
 
-/* Viši navigacijski bar i elegantniji font za stavke */
+/* Navigation bar */
 .navbar {
   background-color: #f79eb3;
-  padding: 30px 0;
+  padding: 15px 0;
   text-align: center;
-  font-family: 'Playfair Display', serif;
-  /* Sofisticirani serif font */
-  letter-spacing: 1px;
 }
 
 .navbar ul {
@@ -25,27 +21,24 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .navbar li {
-  margin: 0 20px;
+  margin: 10px;
 }
 
 .navbar a {
   text-decoration: none;
   color: #fff;
-  font-size: 1.5rem;
-  /* Blago smanjena veličina za skladnost */
+  font-size: 1.2rem;
   transition: color 0.3s ease, background-color 0.3s ease;
   padding: 8px 15px;
   border-radius: 5px;
-  font-family: 'Open Sans', sans-serif;
 }
 
-/* Stil za aktivnu stavku u navigaciji */
 .navbar a.active {
   background-color: #cc4562;
-  color: white;
 }
 
 .navbar a:hover {
@@ -60,68 +53,23 @@ body {
   border-bottom: 2px solid #ffb6c1;
 }
 
-.logo-container {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
 .logo {
-  max-width: 1800px;
+  max-width: 80%;
   height: auto;
   margin: 0 auto;
   display: block;
 }
 
-.site-title {
-  font-size: 2.5rem;
-  /* Povećano za vizuelni uticaj */
-  color: #dd8094;
-  font-family: 'Playfair Display', serif;
-  /* Naglasak na luksuz */
-  margin: 0;
-}
-
-.tagline {
-  font-size: 1.4rem;
-  color: #ff6f91;
-  margin: 5px 0 15px;
-  font-style: italic;
-  font-family: 'Open Sans', sans-serif;
-}
-
-/* Sekcije */
+/* Sections */
 .section {
-  padding: 30px;
-  margin: 20px;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 90%;
   border-radius: 8px;
   background-color: #fffafc;
   border: 1px solid #ffd6db;
   display: none;
-  /* Početno sakrivamo sve sekcije */
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.2rem;
-}
-
-h2 {
-  color: #ff3b67;
-  font-family: 'Playfair Display', serif;
-  /* Upečatljivi naslovi */
-  font-size: 2rem;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-ul {
-  padding-left: 20px;
-}
-
-a {
-  color: #ff3b67;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  font-size: 1rem;
 }
 
 /* Footer */
@@ -131,6 +79,44 @@ a:hover {
   padding: 10px 0;
   color: #333;
   font-size: 0.9rem;
-  font-family: 'Open Sans', sans-serif;
   border-top: 2px solid #ffb6c1;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .navbar li {
+    margin: 5px 0;
+  }
+
+  .logo {
+    max-width: 100%;
+  }
+
+  .section {
+    font-size: 0.9rem;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar a {
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
+
+  .section {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
 }
